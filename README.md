@@ -2,14 +2,17 @@
 Service bash files for running Sinopia as standalone server
 
 ## Usage
-
-  sudo npm i -g sinopia
-  ./sinopia-service start
+```bash
+sudo npm i -g sinopia
+./sinopia-service start
+```
 
 **Stop**
-  
-  ./sinopia-service stop
+```bash
+./sinopia-service stop
+```
 
 **Restart**
-
-  ./sinopia-service restart
+```bash
+./sinopia-service restart
+```
