@@ -5,6 +5,8 @@ ERRFILE=sinopia.err
 CMD="sinopia"
 
 echo $$ > sinopia.pid
+echo > $OUTFILE
+echo > $ERRFILE
 
 while true
 do
