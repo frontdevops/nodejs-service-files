@@ -1,24 +1,27 @@
 #!/usr/bin/env bash
 
+SERVICE=sinopia  # your app name eg. server.js
+PIDFILE=.pid
+
 case "$1" in
   "start")
-    pid=`cat sinopia.pid`
+    pid=`cat $PIDFILE`
 
     if [ -z "$pid" ]
     then
-      nohup ./sinopia-loop.sh &
+      nohup ./loop.sh &
     else
-      echo "Sinopia is runned. Stop server before starting"
+      echo "Server is runned. Stop server before starting"
       exit 1
     fi
 
     ps ax | grep sinopia
     ;;
   "stop")
-    kill $(cat ./sinopia.pid)
-    killall sinopia
+    kill $(cat ./$PIDFILE)
+    killall $SERVICE
     ps ax | grep sinopia
-    echo > sinopia.pid
+    echo > $PIDFILE
   ;;
   "restart")
     $0 stop
