@@ -1,22 +1,19 @@
-# sinopia-service-files
-Service bash files for running Sinopia as standalone server
+# Nodejs service files
+Service bash files for running Nodejs app as standalone server
 
 ## Usage
 **First run**
 ```bash
-# Install
-sudo npm i -g sinopia
-
 # Run
-./sinopia-service start
+./service start
 ```
 
 **Stop**
 ```bash
-./sinopia-service stop
+./service stop
 ```
 
 **Restart**
 ```bash
-./sinopia-service restart
+./service restart
 ```
